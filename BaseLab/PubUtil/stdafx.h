@@ -12,12 +12,18 @@
 
 #pragma once
 
-#include <unistd.h>
-#include <time.h>
-#include <sys/time.h>
-#include <iconv.h>
+#ifdef _WIN32
+#	include <Windows.h>
+#else
+#	include <unistd.h>
+#	include <sys/time.h>
+#	include <iconv.h>
+#endif
+
+#include <stdlib.h>
 #include <string.h>
 
+#include <algorithm>
 #include <string>
 #include <map>
 #include <queue>

@@ -1,8 +1,17 @@
 ﻿  main.cpp
+  Thread.cpp
+src\ThreadPool\Thread.cpp(83): warning C4101: “ex”: 未引用的局部变量
+src\ThreadPool\Thread.cpp(233): warning C4101: “ex”: 未引用的局部变量
+src\ThreadPool\Thread.cpp(281): warning C4101: “ex”: 未引用的局部变量
+  ThreadPool.cpp
+src\ThreadPool\ThreadPool.cpp(163): warning C4101: “ex”: 未引用的局部变量
+src\ThreadPool\ThreadPool.cpp(199): warning C4101: “ex”: 未引用的局部变量
+  ThreadQueue.cpp
+  ThreadWorking.cpp
   正在生成代码
-  0 of 240 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  237 of 240 functions (98.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
-  ThreadPool.vcxproj -> C:\WorkingStation\C_Station\BaseLab\Release\ThreadPool.exe
-  ThreadPool.vcxproj -> C:\WorkingStation\C_Station\BaseLab\Release\ThreadPool.pdb (Full PDB)
+  ThreadPool.vcxproj -> C:\WorkingStation\GitHubRepository\BaseLab\Release\ThreadPool.exe
+  ThreadPool.vcxproj -> C:\WorkingStation\GitHubRepository\BaseLab\Release\ThreadPool.pdb (Full PDB)
