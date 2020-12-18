@@ -2,7 +2,7 @@
 
 include resource.mk
 
-include subdir_Conversion.mk
+include subdir_Convertor.mk
 #include subdir_PubUtil.mk
 include subdir_src.mk
 
