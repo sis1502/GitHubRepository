@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package InforGuard_;
+
+message netCallData
+{
+	int32 nThreadId = 1;
+	bytes sIp = 2;
+	int32 sPort = 3;
+	int32 nSerial = 4;
+	int32 nSubSerial = 5;
+	int32 nRecSerial = 6;
+	int32 nIndent = 7;
+}
+
+message netIpPort
+{
+	bytes sIp = 1;
+	bytes sPort = 2;
+}
+
+message ExceptionError
+{
+	int32 nErrCode = 1;
+	repeated bytes vErrText = 2;
+}
+
+message NetFileTreeNode
+{
+	bytes name = 1;
+	int32 size = 2;
+	int32 time = 3;
+	bool isfolder = 4;
+}
+
+message NetFileListNode
+{
+	bytes name = 1;
+	int32 size = 2;
+	int32 time = 3;
+	bool isfolder = 4;
+}
+
+message s_FileNodeInfo
+{
+	bytes name = 1;
+	bool isfile = 2;
+	int32 mtime = 3;
+	int32 type = 4;
+}
+
+message RemoteDirectory
+{
+	repeated s_FileNodeInfo nodes = 1;
+	bytes id = 2;
+}
+
+message MsgBlock
+{
+	int32 mid = 1;
+	int32 level = 2;
+	int32 serial = 3;
+	bytes src = 4;
+	bytes dst = 5;
+	repeated bytes pl = 6;
+}
+
+message CheckReq
+{
+	bool check = 1;
+}
+
+message CheckRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}

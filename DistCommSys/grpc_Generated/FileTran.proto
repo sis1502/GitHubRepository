@@ -1,0 +1,203 @@
+syntax = "proto3";
+
+import "Metadata.proto";
+
+package InforGuard_;
+
+service FileTran
+{
+	rpc Check(CheckReq) returns (CheckRes);
+	rpc GetFileBlock(GetFileBlockReq) returns (GetFileBlockRes);
+	rpc PutFileBlock(PutFileBlockReq) returns (PutFileBlockRes);
+	rpc MakeDirectory(MakeDirectoryReq) returns (MakeDirectoryRes);
+	rpc MoveFileIn(MoveFileInReq) returns (MoveFileInRes);
+	rpc MoveFileOut(MoveFileOutReq) returns (MoveFileOutRes);
+	rpc RenameFile(RenameFileReq) returns (RenameFileRes);
+	rpc QueryBasePath(QueryBasePathReq) returns (QueryBasePathRes);
+	rpc isFileExist(isFileExistReq) returns (isFileExistRes);
+	rpc setFileTime(setFileTimeReq) returns (setFileTimeRes);
+	rpc getFileTime(getFileTimeReq) returns (getFileTimeRes);
+	rpc sendFileList(sendFileListReq) returns (sendFileListRes);
+	rpc sendAccess(sendAccessReq) returns (sendAccessRes);
+	rpc checkFileList(checkFileListReq) returns (checkFileListRes);
+}
+
+message GetFileBlockReq
+{
+	netCallData call = 1;
+	bytes filename = 2;
+	sint64 off = 3;
+	int32 len = 4;
+}
+
+message GetFileBlockRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	bytes buff = 3;
+	int32 len = 4;
+	int32 ret = 5;
+}
+
+message PutFileBlockReq
+{
+	netCallData call = 1;
+	bytes filename = 2;
+	sint64 off = 3;
+	bytes buff = 4;
+	int32 len = 5;
+}
+
+message PutFileBlockRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 len = 3;
+	int32 ret = 4;
+}
+
+message MakeDirectoryReq
+{
+	netCallData call = 1;
+	bytes filename = 2;
+	bool temp = 3;
+}
+
+message MakeDirectoryRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message MoveFileInReq
+{
+	netCallData call = 1;
+	bytes srcfile = 2;
+	bytes dstfile = 3;
+	bytes delfile = 4;
+	bool bTopPath = 5;
+}
+
+message MoveFileInRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message MoveFileOutReq
+{
+	netCallData call = 1;
+	bytes srcfile = 2;
+	bytes dstfile = 3;
+}
+
+message MoveFileOutRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message RenameFileReq
+{
+	netCallData call = 1;
+	bytes oldfile = 2;
+	bytes newfile = 3;
+	int32 attr = 4;
+}
+
+message RenameFileRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message QueryBasePathReq
+{
+	bool req = 1;
+}
+
+message QueryBasePathRes
+{
+	ExceptionError ex = 1;
+	bytes basepath = 2;
+	int32 ret = 3;
+}
+
+message isFileExistReq
+{
+	bytes filePath = 1;
+}
+
+message isFileExistRes
+{
+	ExceptionError ex = 1;
+	int32 fileSize = 2;
+	int32 ret = 3;
+}
+
+message setFileTimeReq
+{
+	netCallData call = 1;
+	bytes filename = 2;
+	int32 mtime = 3;
+}
+
+message setFileTimeRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message getFileTimeReq
+{
+	netCallData call = 1;
+	bytes filename = 2;
+}
+
+message getFileTimeRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 mtime = 3;
+	int32 ret = 4;
+}
+
+message sendFileListReq
+{
+	repeated RemoteDirectory list = 1;
+}
+
+message sendFileListRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}
+
+message sendAccessReq
+{
+	bool req = 1;
+}
+
+message sendAccessRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}
+
+message checkFileListReq
+{
+	repeated NetFileListNode inList = 1;
+}
+
+message checkFileListRes
+{
+	ExceptionError ex = 1;
+	repeated bytes notExistList = 2;
+	repeated bytes diffList = 3;
+	int32 ret = 4;
+}

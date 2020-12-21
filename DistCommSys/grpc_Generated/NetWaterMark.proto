@@ -1,0 +1,124 @@
+syntax = "proto3";
+
+import "Metadata.proto";
+
+package InforGuard_;
+
+service NetWaterMark
+{
+	rpc Check(CheckReq) returns (CheckRes);
+	rpc Set(SetReq) returns (SetRes);
+	rpc Get(GetReq) returns (GetRes);
+	rpc Add(AddReq) returns (AddRes);
+	rpc Remove(RemoveReq) returns (RemoveRes);
+	rpc Rename(RenameReq) returns (RenameRes);
+	rpc Verify(VerifyReq) returns (VerifyRes);
+	rpc VerifyForFilter(VerifyForFilterReq) returns (VerifyForFilterRes);
+	rpc RequestResume(RequestResumeReq) returns (RequestResumeRes);
+}
+
+message SetReq
+{
+	netCallData call = 1;
+	bytes file = 2;
+	bytes wm = 3;
+}
+
+message SetRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message GetReq
+{
+	netCallData call = 1;
+	bytes file = 2;
+}
+
+message GetRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	bytes wm = 3;
+	int32 ret = 4;
+}
+
+message AddReq
+{
+	netCallData call = 1;
+	bytes filepath = 2;
+}
+
+message AddRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message RemoveReq
+{
+	netCallData call = 1;
+	bytes filepath = 2;
+}
+
+message RemoveRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message RenameReq
+{
+	netCallData call = 1;
+	bytes oldfilename = 2;
+	bytes newfilename = 3;
+}
+
+message RenameRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message VerifyReq
+{
+	netCallData call = 1;
+	bytes sFileName = 2;
+	int32 nFileSize = 3;
+	bytes sWm = 4;
+	bool bSimpleSync = 5;
+}
+
+message VerifyRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	int32 ret = 3;
+}
+
+message VerifyForFilterReq
+{
+	bytes files = 1;
+}
+
+message VerifyForFilterRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}
+
+message RequestResumeReq
+{
+	bytes filename = 1;
+}
+
+message RequestResumeRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}

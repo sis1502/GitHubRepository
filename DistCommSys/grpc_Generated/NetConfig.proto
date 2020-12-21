@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+import "Metadata.proto";
+
+package InforGuard_;
+
+service NetConfig
+{
+	rpc Load(LoadReq) returns (LoadRes);
+	rpc Save(SaveReq) returns (SaveRes);
+}
+
+message LoadReq
+{
+	repeated netIpPort seqIpPort = 1;
+	bytes cfgFileName = 2;
+}
+
+message LoadRes
+{
+	ExceptionError ex = 1;
+	bytes cfgFileContent = 2;
+	int32 ret = 3;
+}
+
+message SaveReq
+{
+	repeated netIpPort seqIpPort = 1;
+	bytes cfgFileName = 2;
+	bytes cfgFileContent = 3;
+}
+
+message SaveRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}

@@ -1,0 +1,19 @@
+// MsgTran.idl
+
+#include "Exception.idl"
+
+module InforGuard
+{
+	interface MsgTran
+	{
+		long GetMessage(
+			in HostChain seqIpPort, 
+			inout MsgBlock mb
+			)raises( ExceptionError );
+
+		long PutMessage(
+			in HostChain seqIpPort, 
+			in MsgBlock mb
+			)raises( ExceptionError );
+	};
+};

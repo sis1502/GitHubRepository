@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+import "Metadata.proto";
+
+package InforGuard_;
+
+service MsgTran
+{
+	rpc GetMsg(GetMsgReq) returns (GetMsgRes);
+	rpc PutMsg(PutMsgReq) returns (PutMsgRes);
+
+}
+
+message GetMsgReq
+{
+	repeated netIpPort seqIpPort = 1;
+	MsgBlock mb = 2;
+}
+
+message GetMsgRes
+{
+	ExceptionError ex = 1;
+	MsgBlock mb = 2;
+	int32 ret = 3;
+}
+
+message PutMsgReq
+{
+	repeated netIpPort seqIpPort = 1;
+	MsgBlock mb = 2;
+}
+
+message PutMsgRes
+{
+	ExceptionError ex = 1;
+	int32 ret = 2;
+}

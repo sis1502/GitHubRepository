@@ -1,0 +1,86 @@
+// Exception.idl
+
+module InforGuard
+{
+	// 远程调用时用
+	struct netCallData
+	{
+		long nThreadId;	// 线程号
+		string sIp;		// 调用方IP
+		string sPort;	// 调用方Port
+		long nSerial;	// 主流水号
+		long nSubSerial;// 子流水号
+		long nRecSerial;// 日志序号
+		long nIndent;	// 缩进排版
+	};
+
+	// 数据转发时用
+	struct netIpPort
+	{
+		string sIp;
+		string sPort;
+	};
+	typedef sequence <netIpPort> HostChain;
+
+	// 异常处理时用
+	exception ExceptionError
+	{
+		long nErrCode;
+		sequence < string > vErrText;
+	};
+
+	// 远程目录用到的数据类型
+	struct NetFileTreeNode
+	{
+		string name;
+		long size;
+		long time;
+		boolean isfolder;
+		sequence<NetFileTreeNode> nSeq;
+	};
+
+	struct NetFileListNode
+	{
+		string name;
+		long size;
+		long time;
+		boolean isfolder;
+	};
+
+	typedef sequence<NetFileListNode> NetFileList;
+
+	struct s_FileNodeInfo
+	{
+		string name;
+		boolean isfile;
+		long mtime;
+		long type;
+	};
+
+	typedef sequence<s_FileNodeInfo> s_FileList;
+
+	struct RemoteDirectory
+	{
+		s_FileList list;
+		string id;
+	};
+
+	typedef sequence<RemoteDirectory> RemoteDirectoryList;
+
+	// 消息发送用到的数据类型
+	typedef sequence<string> ParamList;
+
+	struct MsgBlock
+	{
+		long mid;
+		long level;
+		long serial;
+		string src;
+		string dst;
+		ParamList pl;
+	};
+
+	// 文件发送用到数据类型
+	typedef sequence<octet> OctetSeq;
+
+};

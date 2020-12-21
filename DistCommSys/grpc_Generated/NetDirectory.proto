@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+import "Metadata.proto";
+
+package InforGuard_;
+
+service NetDirectory
+{
+	rpc Check(CheckReq) returns (CheckRes);
+	rpc GetTree(GetTreeReq) returns (GetTreeRes);
+	rpc GetList(GetListReq) returns (GetListRes);
+	rpc GetTreeEx(GetTreeExReq) returns (GetTreeExRes);
+	rpc GetListEx(GetListExReq) returns (GetListExRes);
+}
+
+message GetTreeReq
+{
+	netCallData call = 1;
+	repeated netIpPort seqIpPort = 2;
+	bytes remotefoldername = 3;
+	int32 mode = 4;
+}
+
+message GetTreeRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	repeated NetFileTreeNode treenode = 3;
+	int32 ret = 4;
+}
+
+message GetListReq
+{
+	netCallData call = 1;
+	repeated netIpPort seqIpPort = 2;
+	bytes remotefoldername = 3;
+	int32 mode = 4;
+}
+
+message GetListRes
+{
+	netCallData call = 1;
+	ExceptionError ex = 2;
+	repeated NetFileListNode filelist = 3;
+	int32 ret = 4;
+}
+
+message GetTreeExReq
+{
+	repeated netIpPort seqIpPort = 1;
+	bytes remotefoldername = 2;
+	int32 mode = 3;
+}
+
+message GetTreeExRes
+{
+	ExceptionError ex = 1;
+	repeated NetFileTreeNode treenode = 2;
+	int32 ret = 3;
+}
+
+message GetListExReq
+{
+	repeated netIpPort seqIpPort = 1;
+	bytes remotefoldername = 2;
+	int32 mode = 3;
+}
+
+message GetListExRes
+{
+	ExceptionError ex = 1;
+	repeated NetFileListNode filelist = 2;
+	int32 ret = 3;
+}
