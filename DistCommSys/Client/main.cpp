@@ -6,10 +6,52 @@
 
 #include <grpcpp/grpcpp.h>
 #include "FileTran.grpc.pb.h"
+#include <sys/time.h>
+
+#define MAX_CONN 200000
 
 int main(int argc, char *argv[])
 {
-	LARGE_INTEGER fq;
+	shared_ptr<::grpc::ChannelInterface> p[MAX_CONN];
+	unique_ptr<InforGuard_::FileTran::Stub> s[MAX_CONN];
+	
+	struct timeval start,end;
+	gettimeofday(&start, nullptr);
+	
+	for (int i = 0; i < MAX_CONN; i++)
+	{
+		p[i] = ::grpc::CreateChannel("localhost:10005", ::grpc::InsecureChannelCredentials());
+		if (p[i] != nullptr)
+		{
+			s[i] = InforGuard_::FileTran::NewStub(p[i]);
+			if (s[i] != nullptr)
+			{
+				//printf("create interface[%d]\n", i);
+				//::grpc::ClientContext context;
+				//::InforGuard_::CheckReq request;
+				//::InforGuard_::CheckRes response;
+				//s[i]->Check(&context, request, &response);
+			}
+			else
+			{
+				printf("failed to create interface[%d]\n", i);
+			}
+		}
+		else
+		{
+			printf("failed to create channel[%d]\n", i);
+		}
+	}
+	
+	gettimeofday(&end, nullptr);
+	printf("total cost %ld,%ld\n", end.tv_sec - start.tv_sec, end.tv_usec - start.tv_usec);
+
+	::grpc::ClientContext context;
+	::InforGuard_::CheckReq request;
+	::InforGuard_::CheckRes response;
+	printf("%d\n", s[0]->Check(&context, request, &response).error_code());
+	
+/*	LARGE_INTEGER fq;
 	QueryPerformanceFrequency(&fq);
 
 	LARGE_INTEGER pc1,pc2,pc3,pc4;
@@ -39,7 +81,7 @@ int main(int argc, char *argv[])
 	::InforGuard_::CheckReq request2;
 	::InforGuard_::CheckRes response2;
 	I2->Check(&context2, request2, &response2);
-
+*/
 /*	CGRPCClient client;
 	if (client.Init())
 	{
