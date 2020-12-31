@@ -1,6 +1,6 @@
 #pragma once
 
-#include "grpc_Generated/NetDirectory.grpc.pb.h"
+#include "NetDirectory.grpc.pb.h"
 
 class CNetDirectoryServerImpl;
 

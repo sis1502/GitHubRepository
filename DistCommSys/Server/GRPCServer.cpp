@@ -55,7 +55,15 @@ Run()
 
 	std::unique_ptr<::grpc::Server> server(builder.BuildAndStart());
 
-	printf("对（%s）监听成功\n", m_Conn.c_str());
+	if (server != nullptr)
+	{
+		printf("对（%s）监听成功\n", m_Conn.c_str());
+	}
+	else
+	{
+		printf("对（%s）监听失败\n", m_Conn.c_str());
+		return false;
+	}
 
 	server->Wait();
 

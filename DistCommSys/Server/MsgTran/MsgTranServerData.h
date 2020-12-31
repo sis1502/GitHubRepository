@@ -2,7 +2,7 @@
 
 #include "PubUtil/BaseDef.h"
 
-#include "grpc_Generated/MsgTran.grpc.pb.h"
+#include "MsgTran.grpc.pb.h"
 
 class CMsgTranServerImpl;
 

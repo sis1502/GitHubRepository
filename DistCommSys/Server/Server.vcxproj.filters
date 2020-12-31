@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="gRPC">
+      <UniqueIdentifier>{429e88b8-1a0b-4f56-b46a-a2c1f5139b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileTran">
+      <UniqueIdentifier>{2f6e69a9-317a-4dfc-86c9-c47c3afafb18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MsgTran">
+      <UniqueIdentifier>{2456869d-9c0b-45e7-b486-27f97a1843ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetConfig">
+      <UniqueIdentifier>{d765a63d-24db-42ae-a172-8adf004effb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetDirectory">
+      <UniqueIdentifier>{f238fc7c-2239-43af-bdd9-f0181f000eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetWaterMark">
+      <UniqueIdentifier>{b0b1dc1c-6982-4ee9-871f-4970f7785ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PubUtil">
+      <UniqueIdentifier>{cb53f4ef-4ffe-4686-9ab4-6e9399fa371f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FileTran\FileTranServerCarry.cpp">
+      <Filter>FileTran</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTran\FileTranServerData.cpp">
+      <Filter>FileTran</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTran\FileTranServerImpl.cpp">
+      <Filter>FileTran</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgTran\MsgTranServerCarry.cpp">
+      <Filter>MsgTran</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgTran\MsgTranServerData.cpp">
+      <Filter>MsgTran</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgTran\MsgTranServerImpl.cpp">
+      <Filter>MsgTran</Filter>
+    </ClCompile>
+    <ClCompile Include="NetConfig\NetConfigServerCarry.cpp">
+      <Filter>NetConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="NetConfig\NetConfigServerData.cpp">
+      <Filter>NetConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="NetConfig\NetConfigServerImpl.cpp">
+      <Filter>NetConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="NetDirectory\NetDirectoryServerCarry.cpp">
+      <Filter>NetDirectory</Filter>
+    </ClCompile>
+    <ClCompile Include="NetDirectory\NetDirectoryServerData.cpp">
+      <Filter>NetDirectory</Filter>
+    </ClCompile>
+    <ClCompile Include="NetDirectory\NetDirectoryServerImpl.cpp">
+      <Filter>NetDirectory</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerCarry.cpp">
+      <Filter>NetWaterMark</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerData.cpp">
+      <Filter>NetWaterMark</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerImpl.cpp">
+      <Filter>NetWaterMark</Filter>
+    </ClCompile>
+    <ClCompile Include="GRPCServer.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\FileTran.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\FileTran.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\Metadata.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\Metadata.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\MsgTran.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\MsgTran.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetConfig.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetConfig.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetDirectory.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetDirectory.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.grpc.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.pb.cc">
+      <Filter>gRPC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileTran\FileTranServerCarry.h">
+      <Filter>FileTran</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTran\FileTranServerData.h">
+      <Filter>FileTran</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTran\FileTranServerImpl.h">
+      <Filter>FileTran</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgTran\MsgTranServerCarry.h">
+      <Filter>MsgTran</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgTran\MsgTranServerData.h">
+      <Filter>MsgTran</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgTran\MsgTranServerImpl.h">
+      <Filter>MsgTran</Filter>
+    </ClInclude>
+    <ClInclude Include="NetConfig\NetConfigServerCarry.h">
+      <Filter>NetConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="NetConfig\NetConfigServerData.h">
+      <Filter>NetConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="NetConfig\NetConfigServerImpl.h">
+      <Filter>NetConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="NetDirectory\NetDirectoryServerCarry.h">
+      <Filter>NetDirectory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetDirectory\NetDirectoryServerData.h">
+      <Filter>NetDirectory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetDirectory\NetDirectoryServerImpl.h">
+      <Filter>NetDirectory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerCarry.h">
+      <Filter>NetWaterMark</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerData.h">
+      <Filter>NetWaterMark</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerImpl.h">
+      <Filter>NetWaterMark</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\BaseDef.h">
+      <Filter>PubUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\DataExchange.h">
+      <Filter>PubUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="GRPCServer.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\FileTran.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\FileTran.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\Metadata.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\Metadata.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\MsgTran.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\MsgTran.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetConfig.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetConfig.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetDirectory.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetDirectory.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.grpc.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h">
+      <Filter>gRPC</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

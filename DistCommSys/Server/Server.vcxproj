@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25C0477A-C68B-48B6-AD41-0DDE150A1DF8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Server</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\Win10</OutDir>
+    <IntDir>$(Configuration)\Win10</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\Win10</OutDir>
+    <IntDir>$(Configuration)\Win10</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)grpc\Win10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)$(Configuration)\Win10\$(ProjectName).exe" "$(SolutionDir)TestHouse\$(Configuration)\Win10\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)grpc\Win10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)$(Configuration)\Win10\$(ProjectName).exe" "$(SolutionDir)TestHouse\$(Configuration)\Win10\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)grpc_Generated\Win10;$(SolutionDir)grpc\Win10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>absl_bad_optional_access.lib;absl_base.lib;absl_civil_time.lib;absl_dynamic_annotations.lib;absl_int128.lib;absl_log_severity.lib;absl_raw_logging_internal.lib;absl_spinlock_wait.lib;absl_str_format_internal.lib;absl_strings.lib;absl_strings_internal.lib;absl_throw_delegate.lib;absl_time.lib;absl_time_zone.lib;address_sorting.lib;cares.lib;crypto.lib;gpr.lib;grpc.lib;grpc_plugin_support.lib;grpc++.lib;grpc++_alts.lib;grpc++_error_details.lib;grpc++_reflection.lib;grpcpp_channelz.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;re2.lib;ssl.lib;upb.lib;zlib.lib;zlibstatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)grpc\Win10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)$(Configuration)\Win10\$(ProjectName).exe" "$(SolutionDir)TestHouse\$(Configuration)\Win10\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)grpc\Win10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)$(Configuration)\Win10\$(ProjectName).exe" "$(SolutionDir)TestHouse\$(Configuration)\Win10\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\grpc_Generated\Win10\FileTran.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\FileTran.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\Metadata.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\Metadata.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\MsgTran.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\MsgTran.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetConfig.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetConfig.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetDirectory.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetDirectory.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.grpc.pb.cc" />
+    <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.pb.cc" />
+    <ClCompile Include="FileTran\FileTranServerCarry.cpp" />
+    <ClCompile Include="FileTran\FileTranServerData.cpp" />
+    <ClCompile Include="FileTran\FileTranServerImpl.cpp" />
+    <ClCompile Include="GRPCServer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MsgTran\MsgTranServerCarry.cpp" />
+    <ClCompile Include="MsgTran\MsgTranServerData.cpp" />
+    <ClCompile Include="MsgTran\MsgTranServerImpl.cpp" />
+    <ClCompile Include="NetConfig\NetConfigServerCarry.cpp" />
+    <ClCompile Include="NetConfig\NetConfigServerData.cpp" />
+    <ClCompile Include="NetConfig\NetConfigServerImpl.cpp" />
+    <ClCompile Include="NetDirectory\NetDirectoryServerCarry.cpp" />
+    <ClCompile Include="NetDirectory\NetDirectoryServerData.cpp" />
+    <ClCompile Include="NetDirectory\NetDirectoryServerImpl.cpp" />
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerCarry.cpp" />
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerData.cpp" />
+    <ClCompile Include="NetWaterMark\NetWaterMarkServerImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\grpc_Generated\Win10\FileTran.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\FileTran.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\Metadata.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\Metadata.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\MsgTran.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\MsgTran.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetConfig.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetConfig.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetDirectory.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetDirectory.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.grpc.pb.h" />
+    <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h" />
+    <ClInclude Include="..\PubUtil\BaseDef.h" />
+    <ClInclude Include="..\PubUtil\DataExchange.h" />
+    <ClInclude Include="FileTran\FileTranServerCarry.h" />
+    <ClInclude Include="FileTran\FileTranServerData.h" />
+    <ClInclude Include="FileTran\FileTranServerImpl.h" />
+    <ClInclude Include="GRPCServer.h" />
+    <ClInclude Include="MsgTran\MsgTranServerCarry.h" />
+    <ClInclude Include="MsgTran\MsgTranServerData.h" />
+    <ClInclude Include="MsgTran\MsgTranServerImpl.h" />
+    <ClInclude Include="NetConfig\NetConfigServerCarry.h" />
+    <ClInclude Include="NetConfig\NetConfigServerData.h" />
+    <ClInclude Include="NetConfig\NetConfigServerImpl.h" />
+    <ClInclude Include="NetDirectory\NetDirectoryServerCarry.h" />
+    <ClInclude Include="NetDirectory\NetDirectoryServerData.h" />
+    <ClInclude Include="NetDirectory\NetDirectoryServerImpl.h" />
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerCarry.h" />
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerData.h" />
+    <ClInclude Include="NetWaterMark\NetWaterMarkServerImpl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

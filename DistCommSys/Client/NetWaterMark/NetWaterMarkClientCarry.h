@@ -2,7 +2,7 @@
 
 #include "PubUtil/BaseDef.h"
 
-#include "grpc_Generated/NetWaterMark.grpc.pb.h"
+#include "NetWaterMark.grpc.pb.h"
 
 #include <grpcpp/grpcpp.h>
 

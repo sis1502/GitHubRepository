@@ -2,7 +2,7 @@
 
 #include "PubUtil/BaseDef.h"
 
-#include "grpc_Generated/FileTran.grpc.pb.h"
+#include "FileTran.grpc.pb.h"
 
 class CFileTranServerImpl;
 

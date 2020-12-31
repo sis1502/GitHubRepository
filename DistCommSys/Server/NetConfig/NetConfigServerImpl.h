@@ -22,6 +22,6 @@ public:
 		st_ExceptionError &ex);
 
 public:
-	static string sAuthentication;
+	//...
 };
 

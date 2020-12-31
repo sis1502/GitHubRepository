@@ -2,7 +2,7 @@
 
 #include "PubUtil/BaseDef.h"
 
-#include "grpc_Generated/NetConfig.grpc.pb.h"
+#include "NetConfig.grpc.pb.h"
 
 #include <grpcpp/grpcpp.h>
 

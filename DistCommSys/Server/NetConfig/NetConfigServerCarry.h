@@ -1,6 +1,6 @@
 #pragma once
 
-#include "grpc_Generated/NetConfig.grpc.pb.h"
+#include "NetConfig.grpc.pb.h"
 
 class CNetConfigServerData;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "grpc_Generated/NetWaterMark.grpc.pb.h"
+#include "NetWaterMark.grpc.pb.h"
 
 class CNetWaterMarkServerImpl;
 

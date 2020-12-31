@@ -74,5 +74,5 @@ public:
 		st_ExceptionError &ex);
 
 private:
-	char *transblock;
+	//...
 };

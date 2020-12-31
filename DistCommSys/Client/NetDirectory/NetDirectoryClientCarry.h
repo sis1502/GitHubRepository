@@ -2,7 +2,7 @@
 
 #include "PubUtil/BaseDef.h"
 
-#include "grpc_Generated/NetDirectory.grpc.pb.h"
+#include "NetDirectory.grpc.pb.h"
 
 #include <grpcpp/grpcpp.h>
 
