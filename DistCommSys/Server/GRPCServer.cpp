@@ -26,7 +26,8 @@
 CGRPCServer::
 CGRPCServer(const string &ip, const unsigned int &port)
 {
-	m_Conn = ip + string(":") + to_string(port);
+	//m_Conn = string("[::]:") + to_string(port);
+	m_Conn = string("0.0.0.0:") + to_string(port);
 }
 
 

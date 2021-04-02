@@ -31,6 +31,10 @@
 #include <map>
 #include <queue>
 #include <string>
+#include <iostream>
+
+//** C++11标准时统相关
+#include <chrono>
 
 //** C++11标准线程相关
 #include <thread>
@@ -38,6 +42,7 @@
 #include <condition_variable>
 
 using namespace std;
+using namespace chrono;
 
 #ifdef WIN32
 #	define SLEEP(sec) Sleep(sec*1000)

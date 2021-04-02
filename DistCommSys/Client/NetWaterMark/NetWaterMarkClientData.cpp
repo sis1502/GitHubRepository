@@ -33,7 +33,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Check(conn, request, &response);
+	bool check = m_Carry->Check(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -49,7 +49,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -82,7 +82,7 @@ Set(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Set(conn, request, &response);
+	bool check = m_Carry->Set(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -101,7 +101,7 @@ Set(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -131,7 +131,7 @@ Get(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Get(conn, request, &response);
+	bool check = m_Carry->Get(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -153,7 +153,7 @@ Get(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -182,7 +182,7 @@ Add(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Add(conn, request, &response);
+	bool check = m_Carry->Add(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -201,7 +201,7 @@ Add(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -230,7 +230,7 @@ Remove(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Remove(conn, request, &response);
+	bool check = m_Carry->Remove(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -249,7 +249,7 @@ Remove(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -282,7 +282,7 @@ Rename(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Rename(conn, request, &response);
+	bool check = m_Carry->Rename(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -301,7 +301,7 @@ Rename(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -342,7 +342,7 @@ Verify(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Verify(conn, request, &response);
+	bool check = m_Carry->Verify(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -361,7 +361,7 @@ Verify(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -382,7 +382,7 @@ VerifyForFilter(const string &conn, const string &files, __int32 &ret, st_Except
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->VerifyForFilter(conn, request, &response);
+	bool check = m_Carry->VerifyForFilter(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -398,7 +398,7 @@ VerifyForFilter(const string &conn, const string &files, __int32 &ret, st_Except
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -419,7 +419,7 @@ RequestResume(const string &conn, const string &filename, __int32 &ret, st_Excep
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->RequestResume(conn, request, &response);
+	bool check = m_Carry->RequestResume(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -435,5 +435,5 @@ RequestResume(const string &conn, const string &filename, __int32 &ret, st_Excep
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }

@@ -54,7 +54,7 @@ GetMessage(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetMessage(conn, request, &response);
+	bool check = m_Carry->GetMessage(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -82,7 +82,7 @@ GetMessage(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -122,7 +122,7 @@ PutMessage(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->PutMessage(conn, request, &response);
+	bool check = m_Carry->PutMessage(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -138,5 +138,5 @@ PutMessage(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }

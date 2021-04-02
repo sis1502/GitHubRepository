@@ -12,7 +12,7 @@ int main(int agrc, char *argv[])
 	string gbk_;
 	for (int i = 0; i < 10; i++)
 	{
-		gbk_ += "Èâ";
+		gbk_ += "ï¿½ï¿½";
 	}
 	string gbk;
 	for (int i = 0; i < 1; i++)

@@ -34,6 +34,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="PubUtil\ThreadPool">
+      <UniqueIdentifier>{b07330e8-1e0d-4bd2-8e09-66adf7c60642}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\PubUtil\BaseDef.h">
@@ -129,6 +132,33 @@
     <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h">
       <Filter>gRPC</Filter>
     </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\Thread.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadFrame.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadJobQueue.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadPool.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadQueue.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadRunJob.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadWorking.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadManager.h">
+      <Filter>Client</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientJob.h">
+      <Filter>Client</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileTran\FileTranClientCarry.cpp">
@@ -220,6 +250,24 @@
     </ClCompile>
     <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.pb.cc">
       <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\Thread.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadPool.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadQueue.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadWorking.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadManager.cpp">
+      <Filter>Client</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientJob.cpp">
+      <Filter>Client</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

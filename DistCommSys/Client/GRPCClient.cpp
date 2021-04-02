@@ -33,7 +33,7 @@ bool
 CGRPCClient::
 Init()
 {
-	m_Channel = new (nothrow)CGRPCChannel(2, 2, 5);
+	m_Channel = new (nothrow)CGRPCChannel(2, 2, 3);
 	if (!m_Channel)
 	{
 		return false;

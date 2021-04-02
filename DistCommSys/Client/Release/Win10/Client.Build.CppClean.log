@@ -29,6 +29,12 @@ c:\workingstation\githubrepository\distcommsys\client\release\win10\netconfigcli
 c:\workingstation\githubrepository\distcommsys\client\release\win10\netconfigclientdata.obj
 c:\workingstation\githubrepository\distcommsys\client\release\win10\netconfigclientcarry.obj
 c:\workingstation\githubrepository\distcommsys\client\release\win10\msgtranclientimpl.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\threadmanager.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\clientjob.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\threadworking.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\threadqueue.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\thread.obj
+c:\workingstation\githubrepository\distcommsys\client\release\win10\threadpool.obj
 c:\workingstation\githubrepository\distcommsys\release\win10\client.exe
 c:\workingstation\githubrepository\distcommsys\release\win10\client.ipdb
 c:\workingstation\githubrepository\distcommsys\release\win10\client.iobj

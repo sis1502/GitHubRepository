@@ -33,7 +33,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Check(conn, request, &response);
+	bool check = m_Carry->Check(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -49,7 +49,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -100,7 +100,7 @@ GetFileBlock(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetFileBlock(conn, request, &response);
+	bool check = m_Carry->GetFileBlock(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -125,7 +125,7 @@ GetFileBlock(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -167,7 +167,7 @@ PutFileBlock(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->PutFileBlock(conn, request, &response);
+	bool check = m_Carry->PutFileBlock(conn, request, &response);
 	
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -189,7 +189,7 @@ PutFileBlock(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -219,7 +219,7 @@ MakeDirectory(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->MakeDirectory(conn, request, &response);
+	bool check = m_Carry->MakeDirectory(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -238,7 +238,7 @@ MakeDirectory(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -279,7 +279,7 @@ MoveFileIn(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->MoveFileIn(conn, request, &response);
+	bool check = m_Carry->MoveFileIn(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -298,7 +298,7 @@ MoveFileIn(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -331,7 +331,7 @@ MoveFileOut(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->MoveFileOut(conn, request, &response);
+	bool check = m_Carry->MoveFileOut(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -350,7 +350,7 @@ MoveFileOut(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -387,7 +387,7 @@ RenameFile(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->RenameFile(conn, request, &response);
+	bool check = m_Carry->RenameFile(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -406,7 +406,7 @@ RenameFile(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;}
+	return check;}
 
 bool 
 CFileTranClientData::
@@ -425,7 +425,7 @@ QueryBasePath(const string &conn, string &basepath, __int32 &ret, st_ExceptionEr
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->QueryBasePath(conn, request, &response);
+	bool check = m_Carry->QueryBasePath(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -444,7 +444,7 @@ QueryBasePath(const string &conn, string &basepath, __int32 &ret, st_ExceptionEr
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool 
@@ -465,7 +465,7 @@ isFileExist(const string &conn, const string &filePath, __int32 &fileSize, __int
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->isFileExist(conn, request, &response);
+	bool check = m_Carry->isFileExist(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -484,7 +484,7 @@ isFileExist(const string &conn, const string &filePath, __int32 &fileSize, __int
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -517,7 +517,7 @@ setFileTime(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->setFileTime(conn, request, &response);
+	bool check = m_Carry->setFileTime(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -536,7 +536,7 @@ setFileTime(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -566,7 +566,7 @@ getFileTime(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->getFileTime(conn, request, &response);
+	bool check = m_Carry->getFileTime(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -588,7 +588,7 @@ getFileTime(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool 
@@ -626,7 +626,7 @@ sendFileList(const string &conn, const DistCommSysData_::RemoteDirectoryList &li
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->sendFileList(conn, request, &response);
+	bool check = m_Carry->sendFileList(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -642,7 +642,7 @@ sendFileList(const string &conn, const DistCommSysData_::RemoteDirectoryList &li
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool 
@@ -662,7 +662,7 @@ sendAccess(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->sendAccess(conn, request, &response);
+	bool check = m_Carry->sendAccess(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -678,7 +678,7 @@ sendAccess(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool 
@@ -712,7 +712,7 @@ checkFileList(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->checkFileList(conn, request, &response);
+	bool check = m_Carry->checkFileList(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -742,5 +742,5 @@ checkFileList(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }

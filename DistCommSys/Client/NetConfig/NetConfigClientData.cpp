@@ -42,7 +42,7 @@ Load(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Load(conn, request, &response);
+	bool check = m_Carry->Load(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -61,7 +61,7 @@ Load(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -93,7 +93,7 @@ Save(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Save(conn, request, &response);
+	bool check = m_Carry->Save(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -109,5 +109,5 @@ Save(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }

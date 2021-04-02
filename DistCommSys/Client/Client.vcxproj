@@ -128,7 +128,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_UNITTEST;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_UNITTEST;WIN32;NDEBUG;_UNIT_TEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)grpc_Generated\Win10;$(SolutionDir)grpc\Win10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -180,6 +180,14 @@
     <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h" />
     <ClInclude Include="..\PubUtil\BaseDef.h" />
     <ClInclude Include="..\PubUtil\DataExchange.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\Thread.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadFrame.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadJobQueue.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadPool.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadQueue.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadRunJob.h" />
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadWorking.h" />
+    <ClInclude Include="ClientJob.h" />
     <ClInclude Include="FileTran\FileTranClientCarry.h" />
     <ClInclude Include="FileTran\FileTranClientData.h" />
     <ClInclude Include="FileTran\FileTranClientImpl.h" />
@@ -197,6 +205,7 @@
     <ClInclude Include="NetWaterMark\NetWaterMarkClientCarry.h" />
     <ClInclude Include="NetWaterMark\NetWaterMarkClientData.h" />
     <ClInclude Include="NetWaterMark\NetWaterMarkClientImpl.h" />
+    <ClInclude Include="ThreadManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\grpc_Generated\Win10\FileTran.grpc.pb.cc" />
@@ -211,6 +220,11 @@
     <ClCompile Include="..\grpc_Generated\Win10\NetDirectory.pb.cc" />
     <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.grpc.pb.cc" />
     <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.pb.cc" />
+    <ClCompile Include="..\PubUtil\ThreadPool\Thread.cpp" />
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadPool.cpp" />
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadQueue.cpp" />
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadWorking.cpp" />
+    <ClCompile Include="ClientJob.cpp" />
     <ClCompile Include="FileTran\FileTranClientCarry.cpp" />
     <ClCompile Include="FileTran\FileTranClientData.cpp" />
     <ClCompile Include="FileTran\FileTranClientImpl.cpp" />
@@ -229,6 +243,7 @@
     <ClCompile Include="NetWaterMark\NetWaterMarkClientCarry.cpp" />
     <ClCompile Include="NetWaterMark\NetWaterMarkClientData.cpp" />
     <ClCompile Include="NetWaterMark\NetWaterMarkClientImpl.cpp" />
+    <ClCompile Include="ThreadManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

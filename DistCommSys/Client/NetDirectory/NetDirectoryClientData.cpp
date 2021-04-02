@@ -33,7 +33,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->Check(conn, request, &response);
+	bool check = m_Carry->Check(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -49,7 +49,7 @@ Check(const string &conn, __int32 &ret, st_ExceptionError &ex)
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -87,7 +87,7 @@ GetTree(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetTree(conn, request, &response);
+	bool check = m_Carry->GetTree(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -118,7 +118,7 @@ GetTree(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -156,7 +156,7 @@ GetList(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetList(conn, request, &response);
+	bool check = m_Carry->GetList(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -187,7 +187,7 @@ GetList(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -220,7 +220,7 @@ GetTreeEx(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetTreeEx(conn, request, &response);
+	bool check = m_Carry->GetTreeEx(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -248,7 +248,7 @@ GetTreeEx(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
 
 bool
@@ -281,7 +281,7 @@ GetListEx(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	m_Carry->GetListEx(conn, request, &response);
+	bool check = m_Carry->GetListEx(conn, request, &response);
 
 	/* - - - - - - - - - - - - - - - - - - - - *///<<
 	/*
@@ -309,5 +309,5 @@ GetListEx(const string &conn,
 
 	//>>/* - - - - - - - - - - - - - - - - - - - - */
 
-	return true;
+	return check;
 }
