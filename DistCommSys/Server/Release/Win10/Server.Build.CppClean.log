@@ -1,12 +1,12 @@
 c:\workingstation\githubrepository\distcommsys\server\release\win10\vc140.pdb
-c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranserverimpl.obj
-c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranserverdata.obj
-c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranservercarry.obj
-c:\workingstation\githubrepository\distcommsys\server\release\win10\main.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\grpcserver.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\filetranserverimpl.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\filetranserverdata.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\filetranservercarry.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\threadworking.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\threadqueue.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\threadpool.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\thread.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netwatermark.pb.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netwatermark.grpc.pb.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netdirectory.pb.obj
@@ -28,6 +28,10 @@ c:\workingstation\githubrepository\distcommsys\server\release\win10\netdirectory
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netconfigserverimpl.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netconfigserverdata.obj
 c:\workingstation\githubrepository\distcommsys\server\release\win10\netconfigservercarry.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranserverimpl.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranserverdata.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\msgtranservercarry.obj
+c:\workingstation\githubrepository\distcommsys\server\release\win10\main.obj
 c:\workingstation\githubrepository\distcommsys\release\win10\server.exe
 c:\workingstation\githubrepository\distcommsys\release\win10\server.ipdb
 c:\workingstation\githubrepository\distcommsys\release\win10\server.iobj

@@ -1,6 +1,7 @@
 #pragma once
 
 #ifdef _WIN32
+#	include <WS2tcpip.h>
 #	include <Windows.h>
 #	include <io.h>
 #else
@@ -9,6 +10,7 @@
 #	include <pthread.h>
 #	include <strings.h>
 #	include <sys/prctl.h>
+#	include <arpa/inet.h>
 #endif
 
 #include <stdio.h>
@@ -25,6 +27,12 @@
 
 using namespace std;
 using namespace chrono;
+
+#ifdef WIN32
+#	pragma comment(lib, "ws2_32.lib")
+#else
+
+#endif
 
 #define SUCCESS 0
 #define FAIL -1

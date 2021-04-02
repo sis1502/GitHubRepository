@@ -159,6 +159,9 @@
     <ClInclude Include="ClientJob.h">
       <Filter>Client</Filter>
     </ClInclude>
+    <ClInclude Include="..\PubUtil\ExternFunc.h">
+      <Filter>PubUtil</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileTran\FileTranClientCarry.cpp">

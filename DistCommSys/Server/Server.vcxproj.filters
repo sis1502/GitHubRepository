@@ -34,6 +34,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="PubUtil\ThreadPool">
+      <UniqueIdentifier>{1498b514-df1c-4817-ade5-ca0898aee8ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileTran\FileTranServerCarry.cpp">
@@ -122,6 +125,18 @@
     </ClCompile>
     <ClCompile Include="..\grpc_Generated\Win10\NetWaterMark.pb.cc">
       <Filter>gRPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\Thread.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadPool.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadQueue.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PubUtil\ThreadPool\ThreadWorking.cpp">
+      <Filter>PubUtil\ThreadPool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +229,30 @@
     </ClInclude>
     <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h">
       <Filter>gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\Thread.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadFrame.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadJobQueue.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadPool.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadQueue.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadRunJob.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ThreadPool\ThreadWorking.h">
+      <Filter>PubUtil\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PubUtil\ExternFunc.h">
+      <Filter>PubUtil</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

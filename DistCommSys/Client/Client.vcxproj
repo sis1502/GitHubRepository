@@ -180,6 +180,7 @@
     <ClInclude Include="..\grpc_Generated\Win10\NetWaterMark.pb.h" />
     <ClInclude Include="..\PubUtil\BaseDef.h" />
     <ClInclude Include="..\PubUtil\DataExchange.h" />
+    <ClInclude Include="..\PubUtil\ExternFunc.h" />
     <ClInclude Include="..\PubUtil\ThreadPool\Thread.h" />
     <ClInclude Include="..\PubUtil\ThreadPool\ThreadFrame.h" />
     <ClInclude Include="..\PubUtil\ThreadPool\ThreadJobQueue.h" />
