@@ -17,6 +17,7 @@
 #include <time.h>
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <map>
 #include <vector>
@@ -53,3 +54,12 @@ using namespace chrono;
 #	define __int32 int
 #	define __int64 long long
 #endif
+
+//** 服务端密钥
+static const char *serverkey_path = "server_privatekey.pem";
+//** 服务端自签名证书
+static const char *servercert_path = "server_self_signed_crt.pem";
+//** 客户端密钥
+static const char *clientkey_path = "client_privatekey.pem";
+//** 客户端自签名证书
+static const char *clientcert_path = "client_self_signed_crt.pem";

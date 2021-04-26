@@ -25,7 +25,11 @@ class CNetWaterMarkServerImpl;
 class CGRPCServer final
 {
 public:
-	CGRPCServer(const string &ip, const unsigned int &port);
+	CGRPCServer(const string &ip,
+		const unsigned int &port,
+		const string &certClient,
+		const string &certServer,
+		const string &keyServer);
 	~CGRPCServer();
 
 public:
@@ -57,5 +61,8 @@ private:
 
 private:
 	string m_Conn;
+	string m_ClientCert;
+	string m_ServerCert;
+	string m_ServerKey;
 };
 

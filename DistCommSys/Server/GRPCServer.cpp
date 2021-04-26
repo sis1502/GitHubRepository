@@ -24,10 +24,17 @@
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 
 CGRPCServer::
-CGRPCServer(const string &ip, const unsigned int &port)
+CGRPCServer(const string &ip,
+	const unsigned int &port,
+	const string &certClient,
+	const string &certServer,
+	const string &keyServer)
 {
-	//m_Conn = string("[::]:") + to_string(port);
-	m_Conn = string("0.0.0.0:") + to_string(port);
+	m_Conn = string("[::]:") + to_string(port);
+	//m_Conn = ip + string(":") + to_string(port);
+	m_ClientCert = certClient;
+	m_ServerCert = certServer;
+	m_ServerKey = keyServer;
 }
 
 
@@ -46,7 +53,14 @@ Run()
 
 	grpc::ServerBuilder builder;
 
-	builder.AddListeningPort(m_Conn, grpc::InsecureServerCredentials());
+	grpc::SslServerCredentialsOptions ssl_opts(GRPC_SSL_REQUEST_AND_REQUIRE_CLIENT_CERTIFICATE_AND_VERIFY);
+	//** 客户端根证书
+	ssl_opts.pem_root_certs = m_ClientCert;
+	//** 服务端私钥和服务端证书
+	ssl_opts.pem_key_cert_pairs.push_back(grpc::SslServerCredentialsOptions::PemKeyCertPair{m_ServerKey, m_ServerCert});
+
+	builder.AddListeningPort(m_Conn, grpc::SslServerCredentials(ssl_opts));
+	//builder.AddListeningPort(m_Conn, grpc::InsecureServerCredentials());
 
 	builder.RegisterService(m_FileTranCarry);
 	builder.RegisterService(m_MsgTranCarry);

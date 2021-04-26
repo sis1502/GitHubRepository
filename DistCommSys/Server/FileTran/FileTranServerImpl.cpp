@@ -32,6 +32,9 @@ GetFileBlock(st_NetCallData &call,
 {
 	printf("GetFileBlock\n");
 
+	buff = "Look up which is encrypted.";
+	len = buff.size();
+
 	return 0;
 }
 
@@ -47,7 +50,7 @@ PutFileBlock(	st_NetCallData &call,
 	printf("PutFileBlock\n");
 
 	printf("filename:%s\n", filename.c_str());
-	printf("off:%d\n", off);
+	printf("off:%lld\n", off);
 	printf("len:%d\n", len);
 	printf("buff.len:%d\n", buff.size());
 

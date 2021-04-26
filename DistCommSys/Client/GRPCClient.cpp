@@ -21,6 +21,21 @@ CGRPCClient::
 CGRPCClient()
 {
 	m_Channel = nullptr;
+	m_FileTranCarry = nullptr;
+	m_FileTranData = nullptr;
+	m_FileTranImpl = nullptr;
+	m_MsgTranCarry = nullptr;
+	m_MsgTranData = nullptr;
+	m_MsgTranImpl = nullptr;
+	m_NetConfigCarry = nullptr;
+	m_NetConfigData = nullptr;
+	m_NetConfigImpl = nullptr;
+	m_NetDirectoryCarry = nullptr;
+	m_NetDirectoryData = nullptr;
+	m_NetDirectoryImpl = nullptr;
+	m_NetWaterMarkCarry = nullptr;
+	m_NetWaterMarkData = nullptr;
+	m_NetWaterMarkImpl = nullptr;
 }
 
 CGRPCClient::
@@ -31,9 +46,11 @@ CGRPCClient::
 
 bool 
 CGRPCClient::
-Init()
+Init(const string &certServer,
+	const string &certClient,
+	const string &keyClient)
 {
-	m_Channel = new (nothrow)CGRPCChannel(2, 2, 3);
+	m_Channel = new (nothrow)CGRPCChannel(certServer, certClient, keyClient, 2, 2, 3);
 	if (!m_Channel)
 	{
 		return false;

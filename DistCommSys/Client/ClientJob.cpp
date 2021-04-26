@@ -25,7 +25,7 @@ Run(CThreadJobQueue *p_O, CThreadJobQueue *p_R)
 		st_NetCallData call;
 		string buff;
 		long len = 0;
-		int ret = m_Client->GetFileTran().GetFileBlock("localhost", "10005", call, "Linux123123", 100, buff, len);
+		int ret = m_Client->GetFileTran().GetFileBlock("InforGuard", "10005", call, "Linux123123", 100, buff, len);
 		if (ret == 0)
 		{
 			printf("GetFileBlock Successed\n");

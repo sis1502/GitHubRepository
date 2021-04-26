@@ -30,7 +30,9 @@ public:
 	~CGRPCClient();
 
 public:
-	bool Init();
+	bool Init(const string &certServer,
+		const string &certClient,
+		const string &keyClient);
 
 public:
 	CFileTranClientImpl & GetFileTran();

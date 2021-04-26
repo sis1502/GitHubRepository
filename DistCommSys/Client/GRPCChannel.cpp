@@ -1,8 +1,16 @@
 #include "Client/GRPCChannel.h"
 
 CGRPCChannel::
-CGRPCChannel(const unsigned int &count, const time_t &interval, const time_t &timeout)
+CGRPCChannel(const string &certServer,
+	const string &certClient,
+	const string &keyClient,
+	const unsigned int &count,
+	const time_t &interval,
+	const time_t &timeout)
 {
+	m_ServerCert = certServer;
+	m_ClientCert = certClient;
+	m_ClientKey = keyClient;
 	m_RetryCount = count;
 	m_RetryInterval = interval;
 	m_Timeout = timeout;
@@ -19,18 +27,24 @@ bool
 CGRPCChannel::
 GetChannel(const string &conn, shared_ptr<::grpc::ChannelInterface> &channel)
 {
-	cout << GetCurrentThreadId() << "等待。。。。" << endl;
+	//** 证书参数
+	grpc::SslCredentialsOptions ssl_opts;
+	//** 服务端根证书
+	ssl_opts.pem_root_certs = m_ServerCert;
+	//** 客户端私钥
+	ssl_opts.pem_private_key = m_ClientKey;
+	//** 客户端根证书
+	ssl_opts.pem_cert_chain = m_ClientCert;
 
 	//lock_guard<mutex> lock(m_Mutex);
 	m_Mutex.lock();
-
-	cout << "Timeout:" << m_Timeout << endl;
 
 	high_resolution_clock::time_point beginTime = high_resolution_clock::now();
 
 	if (m_Channel.find(conn) == m_Channel.end())
 	{
-		m_Channel[conn] = ::grpc::CreateChannel(conn, ::grpc::InsecureChannelCredentials());
+		//m_Channel[conn] = ::grpc::CreateChannel(conn, ::grpc::InsecureChannelCredentials());
+		m_Channel[conn] = ::grpc::CreateChannel(conn, ::grpc::SslCredentials(ssl_opts));
 	}
 
 	high_resolution_clock::time_point endTime = high_resolution_clock::now();
@@ -61,7 +75,7 @@ GetChannel(const string &conn, shared_ptr<::grpc::ChannelInterface> &channel)
 
 		endTime = high_resolution_clock::now();
 		timeInterval = duration_cast<milliseconds>(endTime - beginTime);
-		cout << "Wait Success:" << timeInterval.count() << endl;
+		//cout << "Wait Success:" << timeInterval.count() << endl;
 
 		return true;
 	}
@@ -69,9 +83,9 @@ GetChannel(const string &conn, shared_ptr<::grpc::ChannelInterface> &channel)
 	{
 		endTime = high_resolution_clock::now();
 		timeInterval = duration_cast<milliseconds>(endTime - beginTime);
-		cout << "Wait Fail:" << timeInterval.count() << endl;
+		//cout << "Wait Fail:" << timeInterval.count() << endl;
 
-		cout << GetCurrentThreadId() << "结束。。。。" << endl;
+		//cout << GetCurrentThreadId() << "结束。。。。" << endl;
 
 		return false;
 	}
