@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AES">
+      <UniqueIdentifier>{63979573-dc7d-4158-aad8-540acf059a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RSA">
+      <UniqueIdentifier>{3a76df29-2f8b-48db-a620-6946c861e1c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EnDe">
+      <UniqueIdentifier>{e995c68e-457d-474d-a45f-cdd1d6f464a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PubUtil">
+      <UniqueIdentifier>{20612aa9-fa0a-43ff-8aa0-13fdb5ccc92e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\EnDe.cpp">
+      <Filter>EnDe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AES\AESProc.cpp">
+      <Filter>AES</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AES\AESProc.h">
+      <Filter>AES</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AES\AESProcFrame.h">
+      <Filter>AES</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EnDeBase.h">
+      <Filter>EnDe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EnDe.h">
+      <Filter>EnDe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EnDeFrame.h">
+      <Filter>EnDe</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

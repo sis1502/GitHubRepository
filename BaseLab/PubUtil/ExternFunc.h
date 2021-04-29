@@ -58,4 +58,57 @@ namespace Sis_
 			return -1;
 		}
 	}
+
+	//** 以十六进制形式打印unsigned char[]
+	inline void DisplayUnsignedcharInHex(const unsigned char *arr, const int &len, const char *name = nullptr)
+	{
+		cout << "Unsigned Char (HEX) >> ";
+
+		if (name)
+		{
+			cout << name << ":";
+		}
+
+		for (int i = 0; i < len; i++)
+		{
+			//cout << hex << setfill('0') << setw(2) << (unsigned int)arr[i] << " ";
+			printf("%x ", arr[i]);
+		}
+		cout << endl;
+	}
+
+	//** 以字符形式打印unsigned char[]
+	inline void DisplayUnsignedcharInChar(const unsigned char *arr, const int &len, const char *name = nullptr)
+	{
+		cout << "Unsigned Char (CHAR) >> ";
+
+		if (name)
+		{
+			cout << name << ":";
+		}
+
+		for (int i = 0; i < len; i++)
+		{
+			cout << arr[i] << " ";
+		}
+		cout << endl;
+	}
+
+	//** 以十六进制形式打印char[]
+	inline void DisplayCharInHex(const char *arr, const int &len, const char *name = nullptr)
+	{
+		cout << "Char (HEX) >> ";
+
+		if (name)
+		{
+			cout << name << ":";
+		}
+
+		for (int i = 0; i < len; i++)
+		{
+			//cout << hex << setfill('0') << setw(2) << (unsigned int)(unsigned char)arr[i] << " ";
+			printf("%x ", arr[i]);
+		}
+		cout << endl;
+	}
 }
